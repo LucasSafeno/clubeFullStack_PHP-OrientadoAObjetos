@@ -4,8 +4,9 @@ namespace app\classes;
 
 class Crud
 {
+    public $field = 'teste';
     public function read()
     {
-        return 'read';
+        var_dump($this->field);
     }
 }

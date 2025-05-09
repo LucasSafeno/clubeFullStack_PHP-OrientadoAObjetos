@@ -1,10 +1,10 @@
 <?php
-// require "../helpers/autoload.php";
 require "../vendor/autoload.php";
 
+use app\classes\Crud;
 
-// $user = ['name' => 'Lucas User', 'email' => 'lucas@email.com'];
 
-$stdClass = new stdClass;
-$stdClass->name = 'Lucas';
-var_dump($stdClass);
+
+
+$crud = new Crud();
+$crud->read();
