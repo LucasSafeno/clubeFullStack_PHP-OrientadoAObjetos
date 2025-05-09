@@ -3,13 +3,13 @@ namespace app\classes;
 class Login
 {
     //? Propriedade
-    public $email;
-    public $password;
+    // public string $email;
+    // public string $password;
 
     //? Metodo
 
-    public function auth()
+    public function auth(Crud $crud): string
     {
-        return 'O meu email é ' . $this->email . ' e minha senha é ' . $this->password;
+        return $crud->delete();
     }
 }
