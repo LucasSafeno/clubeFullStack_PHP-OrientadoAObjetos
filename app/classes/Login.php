@@ -10,6 +10,6 @@ class Login
 
     public function auth()
     {
-        return 'o meu email é ' . $this->email . ' e minha senha é ' . $this->password;
+        return 'O meu email é ' . $this->email . ' e minha senha é ' . $this->password;
     }
 }
