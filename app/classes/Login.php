@@ -6,7 +6,7 @@ class Login
     // public string $email;
     // public string $password;
 
-    //? Metodo
+    //? Metodos
 
     public function auth(Crud $crud): string
     {
