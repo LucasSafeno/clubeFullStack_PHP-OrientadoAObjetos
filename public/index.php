@@ -1,29 +1,13 @@
 <?php
 
+
 require "../vendor/autoload.php";
 
+use app\classes\{Book, Login, Crud};
 
-class Template
-{
-    const PATH = 'app/views';
 
-    public function load()
-    {
-        return self::PATH;
-    }
-}
+$book = new Book;
 
-class Twig extends Template
-{
-    const PATH = 'app/views/twig';
+$crud = new Crud;
 
-    public function load()
-    {
-        return parent::PATH;
-    }
-}
-
-// echo (new Template)->load();
-// echo Template::PATH;
-
-echo (new Twig)->load();
+$login = new Login;
