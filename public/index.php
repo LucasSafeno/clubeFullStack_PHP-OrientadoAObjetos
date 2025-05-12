@@ -13,8 +13,6 @@ class User
 }
 
 
-User::$name = 'Lucas';
+$myClassName = "User";
 
-echo User::userInfo();
-echo "<br />";
-echo User::$name;
+echo $myClassName::userInfo();
