@@ -3,29 +3,29 @@
 require "../vendor/autoload.php";
 
 
-class User
+class Person
 {
+    public static string $name = 'Lucas';
+
     public static function info()
     {
-        return __CLASS__;
+        return 'Person info';
     }
 
+    public function data()
+    {
+        return 'data classe pai';
+    }
+} //* Person
+
+class User extends Person
+{
     public function teste()
     {
-        return self::info();
+        // return parent::info();
+        // return parent::$name;
+        return parent::data();
     }
-}
+}//* User
 
-class User2 extends User
-{
-    public static function info()
-    {
-        return __CLASS__;
-    }
-
-}
-
-
-// echo User::info();
-$user2 = new User2;
-echo $user2->teste();
+echo (new User)->teste();
