@@ -2,10 +2,11 @@
 
 namespace app\models;
 
-class User
+class User extends Model
 {
-    public function teste()
+    public string $table = "users";
+    public function allUserIsAdmin()
     {
-        return 'teste user';
+        return "Listando todos os admins";
     }
 }
