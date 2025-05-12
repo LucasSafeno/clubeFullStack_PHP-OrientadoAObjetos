@@ -4,26 +4,17 @@ require "../vendor/autoload.php";
 
 class User
 {
+    public static string $name;
 
-    public function __construct(public string $name, public int $age)
+    public static function userInfo()
     {
-        $this->name = $name;
-        $this->age = $age;
-    } // construct
-
-    public function getUserInfo()
-    {
-        return $this->name . " : " . $this->age;
+        return 'Teste metodo estático';
     }
-}//? User
+}
 
-class User2 extends User
-{
-    public function __construct(string $name, int $age)
-    {
-        parent::__construct($name, $age);
-    }// construct
-}//? User2
 
-$user = new User2('Lucas', '30');
-echo $user->getUserInfo();
+User::$name = 'Lucas';
+
+echo User::userInfo();
+echo "<br />";
+echo User::$name;
