@@ -2,17 +2,30 @@
 
 require "../vendor/autoload.php";
 
+
 class User
 {
-    public static string $name;
-
-    public static function userInfo()
+    public static function info()
     {
-        return 'Teste metodo estático';
+        return __CLASS__;
+    }
+
+    public function teste()
+    {
+        return self::info();
     }
 }
 
+class User2 extends User
+{
+    public static function info()
+    {
+        return __CLASS__;
+    }
 
-$myClassName = "User";
+}
 
-echo $myClassName::userInfo();
+
+// echo User::info();
+$user2 = new User2;
+echo $user2->teste();
