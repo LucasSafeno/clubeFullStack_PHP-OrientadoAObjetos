@@ -2,10 +2,9 @@
 
 require "../vendor/autoload.php";
 
+use app\classes\User;
 use app\classes\Person;
 
 
-$person = new Person('Lucas', "lucas@email.com");
-
-
-echo $person->info();
+$user = new User;
+echo $user->info();
