@@ -2,14 +2,10 @@
 
 require "../vendor/autoload.php";
 
-use app\models\Product;
-use app\models\User;
+use app\classes\Person;
 
-$user = new User();
-echo $user->all();
 
-echo '<br />';
-echo '<br />';
+$person = new Person('Lucas', "lucas@email.com");
 
-$product = new Product();
-echo $product->all();
+
+echo $person->info();
